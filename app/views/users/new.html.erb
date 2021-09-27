@@ -1,0 +1,36 @@
+<h1>Sign Up</h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label :username %>
+  <%= f.text_field :username %> <br>
+  
+  <%= f.label :email %>
+  <%= f.text_field :email %> <br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %> <br>
+
+  <%= f.label :passwrod_confirmation, "Confirm Password" %>
+  <%= f.password_field :passwrod_confirmation %> <br><br>
+
+  <%= f.submit "Sign Up" %>
+
+<% end %>
+
+<%= form_with model: @user do |f| %>
+
+  <%= f.label :username %>
+  <%= f.text_field :username %> <br>
+  
+  <%= f.label :email %>
+  <%= f.text_field :email %> <br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %> <br>
+
+  <%= f.label :passwrod_confirmation, "Confirm Password" %>
+  <%= f.password_field :passwrod_confirmation %> <br><br>
+
+  <%= f.submit "Sign Up" %>
+  
+<% end %>
