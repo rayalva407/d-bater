@@ -1,5 +1,9 @@
 <h1>Debates</h1>
-
 <% @debates.each do |debate| %>
-  <%= debate.title %>
+  <ul>
+    <li>
+      <%= debate.title %>
+      <p>Posted by <%= debate.user.username %></p>
+    </li>
+  </ul>
 <% end %>

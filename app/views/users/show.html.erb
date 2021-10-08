@@ -1,4 +1,6 @@
 <h1>Hello <%= @user.username %></h1>
 
-<%= link_to "Sign Out", logout_path %>
-<%= link_to "Create a Debate", new_user_debate_path(@user) %>
+<%= link_to "Sign Out", logout_path %> <br>
+<%= link_to "Create a Debate", new_user_debate_path(@user) %> <br>
+<%= link_to "Your Posted" , user_debates_path(@user) %> <br>
+<%= link_to "See other's debates", debates_path %> <br>

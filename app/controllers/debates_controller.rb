@@ -2,10 +2,12 @@ class DebatesController < ApplicationController
 
   def index
     @user = current_user
-    if paramas[:user_id]
+    if params[:user_id]
       @debates = @user.debates
+      binding.pry
     else
-      @debates = Debate.all
+      @debates = Debate.all.where("user_id != ?", @user.id)
+      binding.pry
     end
   end
 
