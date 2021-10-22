@@ -4,10 +4,8 @@ class DebatesController < ApplicationController
     @user = current_user
     if params[:user_id]
       @debates = @user.debates
-      binding.pry
     else
       @debates = Debate.all.where("user_id != ?", @user.id)
-      binding.pry
     end
   end
 

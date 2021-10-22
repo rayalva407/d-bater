@@ -1,9 +1,21 @@
 <h1>Debates</h1>
-<% @debates.each do |debate| %>
-  <ul>
-    <li>
-      <%= debate.title %>
-      <p>Posted by <%= debate.user.username %></p>
-    </li>
-  </ul>
+<% if params[:user_id] %>
+  <% @debates.each do |debate| %>
+    <ul>
+      <li>
+        <%= debate.title %>
+        <p>Posted by <%= debate.user.username %></p>
+        <%= link_to "Edit Debate", edit_user_debate_path(current_user, debate) %>
+      </li>
+    </ul>
+  <% end %>
+<% else %>
+  <% @debates.each do |debate| %>
+    <ul>
+      <li>
+        <%= debate.title %>
+        <p>Posted by <%= debate.user.username %></p>
+      </li>
+    </ul>
+  <% end %>
 <% end %>

@@ -24,9 +24,3 @@ testuser2.debates.create(title: "Title 13", body: "Body 13", user_id: testuser2.
 testuser3.debates.create(title: "Title 21", body: "Body 21", user_id: testuser3.id)
 testuser3.debates.create(title: "Title 22", body: "Body 22", user_id: testuser3.id)
 testuser3.debates.create(title: "Title 23", body: "Body 23", user_id: testuser3.id)
-# User.destroy_all
-# Team.destroy_all
-
-# 5.times do
-#   User.create(name:Faker::)
-# end
